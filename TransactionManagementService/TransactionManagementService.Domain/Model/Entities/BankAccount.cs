@@ -1,4 +1,3 @@
-using System;
 using TransactionManagementService.Domain.Model.Enums;
 
 namespace TransactionManagementService.Domain.Model.Entities;

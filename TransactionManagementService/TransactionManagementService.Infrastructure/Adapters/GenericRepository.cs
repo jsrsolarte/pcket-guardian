@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 using TransactionManagementService.Domain.Model.Entities.Base;
 using TransactionManagementService.Infrastructure.DataContext;
 using TransactionManagementService.Infrastructure.Ports;
@@ -8,22 +8,22 @@ namespace TransactionManagementService.Infrastructure.Adapters
 {
     public class GenericRepository<T> : IRepository<T> where T : DomainEntity
     {
-        readonly AppDataContext Context;
-        readonly DbSet<T> _dataset;
-        readonly char[] separator = [','];
+        private readonly AppDataContext _context;
+        private readonly DbSet<T> _dataset;
+        private readonly char[] _separator = [','];
 
         public GenericRepository(AppDataContext context)
         {
-            Context = context;
-            _dataset = Context.Set<T>();
+            _context = context;
+            _dataset = _context.Set<T>();
         }
 
-        public async Task<IEnumerable<T>> GetManyAsync(
+        public async Task<IEnumerable<T>> GetListAsync(
             Expression<Func<T, bool>>? filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
             string includeStringProperties = "", bool isTracking = false)
         {
-            IQueryable<T> query = Context.Set<T>();
+            IQueryable<T> query = _context.Set<T>();
 
             if (filter != null)
             {
@@ -33,7 +33,7 @@ namespace TransactionManagementService.Infrastructure.Adapters
             if (!string.IsNullOrEmpty(includeStringProperties))
             {
                 foreach (var includeProperty in includeStringProperties.Split
-                    (separator, StringSplitOptions.RemoveEmptyEntries))
+                             (_separator, StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProperty);
                 }
@@ -60,13 +60,14 @@ namespace TransactionManagementService.Infrastructure.Adapters
             _dataset.Remove(entity);
         }
 
-        public async Task<T> GetOneAsync(Guid id, string? includeStringProperties = default)
+        public async Task<T> GetAsync(Guid id, string? includeStringProperties = default)
         {
             var query = _dataset.AsQueryable();
 
             if (!string.IsNullOrEmpty(includeStringProperties))
             {
-                foreach (var includeProperty in includeStringProperties.Split(separator, StringSplitOptions.RemoveEmptyEntries))
+                foreach (var includeProperty in includeStringProperties.Split(_separator,
+                             StringSplitOptions.RemoveEmptyEntries))
                 {
                     query = query.Include(includeProperty);
                 }
@@ -80,10 +81,9 @@ namespace TransactionManagementService.Infrastructure.Adapters
             _dataset.Update(entity);
         }
 
-        public Task<int> GetCountAsync()
+        public Task<int> CountAsync()
         {
             return _dataset.CountAsync();
         }
-
     }
 }

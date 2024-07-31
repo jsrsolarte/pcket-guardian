@@ -1,10 +1,9 @@
-using System;
 using TransactionManagementService.Domain.Model.Entities.Base;
 using TransactionManagementService.Domain.Model.Enums;
 
 namespace TransactionManagementService.Domain.Model.Entities;
 
-public class Transaction(
+public abstract class Transaction(
     Guid accountId,
     decimal amount,
     TransactionType transactionType,

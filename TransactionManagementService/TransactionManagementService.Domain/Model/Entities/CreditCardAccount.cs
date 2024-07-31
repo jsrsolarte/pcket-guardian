@@ -1,4 +1,3 @@
-using System;
 using TransactionManagementService.Domain.Model.Enums;
 
 namespace TransactionManagementService.Domain.Model.Entities;
@@ -18,6 +17,6 @@ public class CreditCardAccount(
 
     protected override void UpdateBalance(decimal amount, TransactionType transactionType)
     {
-        // Implementación específica para las tarjetas de crédito para actualizar el balance y el crédito disponible
+        //TODO: Implementación específica para las tarjetas de crédito para actualizar el balance y el crédito disponible
     }
 }
