@@ -3,7 +3,7 @@ using TransactionManagementService.Domain.Model.Enums;
 
 namespace TransactionManagementService.Domain.Model.Entities;
 
-public abstract class FinancialAccount(Guid userId, string accountName, decimal balance) : BaseEntity
+public abstract class FinancialAccount(Guid userId, string accountName, decimal balance) : DomainEntity
 {
     private readonly List<RecurringTransaction> _recurringTransactions = [];
     private readonly List<Transaction> _transactions = [];
@@ -18,13 +18,11 @@ public abstract class FinancialAccount(Guid userId, string accountName, decimal 
     {
         _transactions.Add(transaction);
         UpdateBalance(transaction.Amount, transaction.TransactionType);
-        SetUpdatedTimestamp();
     }
 
     public void AddRecurringTransaction(RecurringTransaction recurringTransaction)
     {
         _recurringTransactions.Add(recurringTransaction);
-        SetUpdatedTimestamp();
     }
 
     protected abstract void UpdateBalance(decimal amount, TransactionType transactionType);

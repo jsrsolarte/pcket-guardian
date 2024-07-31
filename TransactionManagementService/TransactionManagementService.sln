@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionManagementService.Domain", "TransactionManagementService.Domain\TransactionManagementService.Domain.csproj", "{6C16FFA2-B6F0-42C1-BA7F-2417561E3E89}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionManagementService.Domain", "TransactionManagementService.Domain\TransactionManagementService.Domain.csproj", "{6C16FFA2-B6F0-42C1-BA7F-2417561E3E89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionManagementService.Infrastructure", "TransactionManagementService.Infrastructure\TransactionManagementService.Infrastructure.csproj", "{4463FCF1-F52D-4E31-BA03-1E0C32BAB2F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransactionManagementService.Infrastructure", "TransactionManagementService.Infrastructure\TransactionManagementService.Infrastructure.csproj", "{4463FCF1-F52D-4E31-BA03-1E0C32BAB2F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionManagementService.Application", "TransactionManagementService.Application\TransactionManagementService.Application.csproj", "{D4A9BC6C-CCBF-4F47-A521-9C5D898F5A60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,15 @@ Global
 		{4463FCF1-F52D-4E31-BA03-1E0C32BAB2F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4463FCF1-F52D-4E31-BA03-1E0C32BAB2F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4463FCF1-F52D-4E31-BA03-1E0C32BAB2F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A9BC6C-CCBF-4F47-A521-9C5D898F5A60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A9BC6C-CCBF-4F47-A521-9C5D898F5A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A9BC6C-CCBF-4F47-A521-9C5D898F5A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A9BC6C-CCBF-4F47-A521-9C5D898F5A60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2B6F7AE-2748-4AC5-B053-05F987E1841D}
 	EndGlobalSection
 EndGlobal

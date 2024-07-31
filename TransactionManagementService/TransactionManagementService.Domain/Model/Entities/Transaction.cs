@@ -11,7 +11,7 @@ public class Transaction(
     Category category,
     DateTime date,
     string description)
-    : BaseEntity
+    : DomainEntity
 {
     public Guid AccountId { get; private set; } = accountId;
     public decimal Amount { get; private set; } = amount;

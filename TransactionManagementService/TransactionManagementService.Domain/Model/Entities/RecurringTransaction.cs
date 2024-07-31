@@ -4,7 +4,7 @@ using TransactionManagementService.Domain.Model.Enums;
 
 namespace TransactionManagementService.Domain.Model.Entities;
 
-public class RecurringTransaction : BaseEntity
+public class RecurringTransaction : DomainEntity
 {
     public FinancialAccount Account { get; private set; }
     public Guid AccountId { get; private set; }
