@@ -1,6 +1,7 @@
-using TransactionManagementService.Domain.Model.Enums;
+using TransactionManagementService.Domain.Accounts.Enums;
+using TransactionManagementService.Domain.Transactions.Enums;
 
-namespace TransactionManagementService.Domain.Model.Entities;
+namespace TransactionManagementService.Domain.Accounts.Entities;
 
 public class BankAccount(Guid userId, string accountName, decimal balance, AccountType accountType)
     : FinancialAccount(userId, accountName, balance)

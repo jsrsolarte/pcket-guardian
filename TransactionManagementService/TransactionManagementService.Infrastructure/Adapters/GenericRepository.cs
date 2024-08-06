@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using TransactionManagementService.Domain.Model.Entities.Base;
+using TransactionManagementService.Domain.Commons.Entities;
 using TransactionManagementService.Infrastructure.DataContext;
 using TransactionManagementService.Infrastructure.Ports;
 

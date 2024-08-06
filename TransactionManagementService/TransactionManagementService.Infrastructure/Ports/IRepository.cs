@@ -1,5 +1,5 @@
 ﻿using System.Linq.Expressions;
-using TransactionManagementService.Domain.Model.Entities.Base;
+using TransactionManagementService.Domain.Commons.Entities;
 
 namespace TransactionManagementService.Infrastructure.Ports
 {

@@ -1,7 +1,7 @@
-using TransactionManagementService.Domain.Model.Entities.Base;
-using TransactionManagementService.Domain.Model.Enums;
+using TransactionManagementService.Domain.Commons.Entities;
+using TransactionManagementService.Domain.Transactions.Enums;
 
-namespace TransactionManagementService.Domain.Model.Entities;
+namespace TransactionManagementService.Domain.Transactions.Entities;
 
 public abstract class Transaction(
     Guid accountId,

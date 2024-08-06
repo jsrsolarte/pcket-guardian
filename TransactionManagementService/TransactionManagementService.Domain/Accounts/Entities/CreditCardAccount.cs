@@ -1,6 +1,6 @@
-using TransactionManagementService.Domain.Model.Enums;
+using TransactionManagementService.Domain.Transactions.Enums;
 
-namespace TransactionManagementService.Domain.Model.Entities;
+namespace TransactionManagementService.Domain.Accounts.Entities;
 
 public class CreditCardAccount(
     Guid userId,

@@ -1,4 +1,4 @@
-namespace TransactionManagementService.Domain.Model.Enums;
+namespace TransactionManagementService.Domain.Transactions.Enums;
 
 public enum RecurrenceFrequency
 {

@@ -1,7 +1,8 @@
-using TransactionManagementService.Domain.Model.Entities.Base;
-using TransactionManagementService.Domain.Model.Enums;
+using TransactionManagementService.Domain.Commons.Entities;
+using TransactionManagementService.Domain.Transactions.Entities;
+using TransactionManagementService.Domain.Transactions.Enums;
 
-namespace TransactionManagementService.Domain.Model.Entities;
+namespace TransactionManagementService.Domain.Accounts.Entities;
 
 public abstract class FinancialAccount(Guid userId, string accountName, decimal balance) : DomainEntity
 {

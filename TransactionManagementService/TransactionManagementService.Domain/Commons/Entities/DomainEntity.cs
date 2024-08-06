@@ -1,6 +1,4 @@
-using System;
-
-namespace TransactionManagementService.Domain.Model.Entities.Base;
+namespace TransactionManagementService.Domain.Commons.Entities;
 
 public abstract class DomainEntity
 {

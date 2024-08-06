@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TransactionManagementService.Domain.Model.Entities.Base;
+using TransactionManagementService.Domain.Commons.Entities;
 
 namespace TransactionManagementService.Infrastructure.DataContext
 {

@@ -1,6 +1,6 @@
-using TransactionManagementService.Domain.Model.Entities.Base;
+using TransactionManagementService.Domain.Commons.Entities;
 
-namespace TransactionManagementService.Domain.Model.Entities;
+namespace TransactionManagementService.Domain.Transactions.Entities;
 
 public abstract class Category(string name, string description) : DomainEntity
 {
